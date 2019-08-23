@@ -1,0 +1,49 @@
+Arguments: 
+  /usr/local/bin/node /usr/share/yarn/bin/yarn.js add express morgan
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Yarn version: 
+  1.17.3
+
+Node version: 
+  10.16.3
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: EACCES: permission denied, mkdir '/home/samuel/Repositórios Git/Aplica-o-Socket.io/node_modules/basic-auth'
+
+npm manifest: 
+  {
+    "name": "aplica-o-socket.io",
+    "version": "1.0.0",
+    "description": "Este repositório apresenta uma aplicação de teste utilizando o socket.io, a qual teve como base o curso de gratuito disponibilizado pela plataforma da devPleno.",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "nodemon src/index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/samuelreboucas07/Aplica-o-Socket.io.git"
+    },
+    "author": "Samuel Rebouças de Jesus",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/samuelreboucas07/Aplica-o-Socket.io/issues"
+    },
+    "homepage": "https://github.com/samuelreboucas07/Aplica-o-Socket.io#readme",
+    "dependencies": {
+      "express": "^4.17.1",
+      "nodemon": "^1.19.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
