@@ -10,7 +10,7 @@ export class HomeServices{
 	constructor(private http: HttpClient){
 	}
 	
-	getMatches(): Observable<any>{
+	getMatches(){
 		return this.http.get<any>(`${environment.apiUrl}/matches`);
 	}
 
