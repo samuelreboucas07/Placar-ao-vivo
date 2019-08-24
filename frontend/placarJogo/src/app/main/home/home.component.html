@@ -1,6 +1,18 @@
-<div class="alert alert-success" role="alert">
-  <h4 class="alert-heading">BOOTSTRAP FUNCIONANDO!</h4>
-  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-  <hr>
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-</div>
+<div class="header" role="alert">
+ <img src="./../../../assets/images/SOCKET.IO-VERDE.png" width="350px">
+ <hr class="linha">
+ </div>
+
+ <div class="container">
+ 	<div class="row justify-content-center">
+    <div class="col-9" *ngFor ="let match of matches;">
+    	<div class="match">
+    	<div class="realTimeMensage">
+    		Siga em tempo real
+    	</div>
+    	{{match.teamA.name}} {{match.teamA.score}} X {{match.teamB.score}} {{match.teamB.name}}
+    	<button type="button" class="btn btn-success Acompanhar">Acompanhar</button>
+    	</div>
+    </div>
+ 	</div>
+ </div>
