@@ -9,6 +9,8 @@
 
 .realTimeMensage{
 	margin-top: 0px;
+	border-top-right-radius: 7px;
+	border-top-left-radius: 7px;
 	background-color: #4CAD25;
 	font-size: 17px;
 	margin-bottom: 40px;
@@ -19,7 +21,7 @@
 	box-shadow: 5px 5px 10px #7D807B;
 	-webkit-box-shadow: 5px 5px 10px #7D807B;
 	-moz-box-shadow: 5px 5px 10px #7D807B;
-	border-radius: 5px;
+	border-radius: 7px;
 	border-width: 2px;
 	border-color: #7D807B;
 	padding-bottom: 40px;
