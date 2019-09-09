@@ -7,7 +7,7 @@
     		Siga em tempo real
     	</div>
     	{{match.teamA.name}} {{match.teamA.score}} X {{match.teamB.score}} {{match.teamB.name}}
-    	<button type="button" class="btn btn-success Acompanhar"  [routerLink]="[{ outlets: { content: ['details']}}]">>Acompanhar</button>
+    	<button type="button" class="btn btn-success Acompanhar"  (click)="viewMatch(match)">>Acompanhar</button>
     	</div>
     </div>
  	</div>
