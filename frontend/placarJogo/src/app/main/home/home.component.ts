@@ -10,9 +10,11 @@ import { throwError } from 'rxjs';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
+  matches: any
 
   constructor(private homeServices: HomeServices) { }
-
+  
   ngOnInit() {
   	this.homeServices.getMatches()
   	.pipe(catchError(error => {
@@ -20,9 +22,11 @@ export class HomeComponent implements OnInit {
   	}))
   	.subscribe(
   		result => {
-  			console.log(result.data)
+        this.matches = result.data
+        console.log(this.matches)
   		}
   	);
   }
+
 
 }

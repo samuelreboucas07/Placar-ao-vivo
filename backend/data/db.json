@@ -47,7 +47,7 @@
           "description": "uhfa"
         }
       ],
-      "team-a": {
+      "teamA": {
         "name": "Flamengo",
         "abbr": "FLA",
         "badge": "logo1.png",
@@ -72,7 +72,7 @@
           }
         ]
       },
-      "team-b": {
+      "teamB": {
         "name": "Atlético-MG",
         "abbr": "CAM",
         "badge": "logo2.png",
@@ -131,7 +131,7 @@
           "description": "Mais uma excelente oportunidade para o Flamengo. Berrío. Mais oportunidade para o Flamengo. Berrío. Mais uma oportunidade para o Flamengo. Berrío. Mais uma excelente oportunidade para o Flamengo. Berrío."
         }
       ],
-      "team-a": {
+      "teamA": {
         "name": "Palmeiras",
         "abbr": "PAL",
         "badge": "logo1.png",
@@ -156,7 +156,7 @@
           }
         ]
       },
-      "team-b": {
+      "teamB": {
         "name": "Cruzeiro-MG",
         "abbr": "CRU",
         "badge": "logo2.png",

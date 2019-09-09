@@ -9,9 +9,8 @@ const db = low(adapter)
 
 
 router.get('/', (req, res, next) => {
-	console.log("testeaaaaaaaaaa")
 	const matches = db.get('matches').value()
-	res.send(matches)
+	res.json({status: "sucess", data: matches})
 })
 
 module.exports = router;
