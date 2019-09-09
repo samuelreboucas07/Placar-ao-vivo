@@ -1,7 +1,3 @@
-<div class="header" role="alert">
- <img src="./../../../assets/images/SOCKET.IO-VERDE.png" width="350px">
- <hr class="linha">
- </div>
  <div class="container">
  	<div class="row justify-content-center">
     <div class="col-9" *ngFor ="let match of matches;">
@@ -11,7 +7,7 @@
     		Siga em tempo real
     	</div>
     	{{match.teamA.name}} {{match.teamA.score}} X {{match.teamB.score}} {{match.teamB.name}}
-    	<button type="button" class="btn btn-success Acompanhar">Acompanhar</button>
+    	<button type="button" class="btn btn-success Acompanhar"  (click)="viewMatch(match)">>Acompanhar</button>
     	</div>
     </div>
  	</div>

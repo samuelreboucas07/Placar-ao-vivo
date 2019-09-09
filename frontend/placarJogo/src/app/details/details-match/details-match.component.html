@@ -1,0 +1,47 @@
+	<div class="container">
+	<div class="row">
+		<div class="col-sm-3 live">
+			<div class="circle"></div>
+			Ao Vivo
+		</div>
+		<div *ngFor = "let matchLive of matches" class="col-sm-3 matches">
+				<div class="row justify-content-md-center">
+				{{matchLive.championship.abbr}}
+				</div>
+				<div class="row justify-content-md-width scoreboard">
+				{{matchLive.teamA.abbr}}
+				{{matchLive.teamA.score}}
+				</div>
+				<div class="row justify-content-md-width scoreboard">
+				{{matchLive.teamB.abbr}}
+				{{matchLive.teamB.score}}
+				</div>
+			</div>
+	</div>
+</div>
+
+	<div class="scoreboardMatch">
+		<div class="container resultMatch">
+			<label class="row championship">
+				{{match.championship.name}}
+			</label>
+			<label class="teamName">
+				{{match.teamA.name}}
+			</label>
+			<label class="teamScore">
+				{{match.teamA.score}}
+			</label>
+				X
+			<label class="teamScore">
+				{{match.teamB.score}}
+			</label>
+			<label class="teamName">
+				{{match.teamB.name}}
+			</label>
+		</div>
+	</div>
+<div class="container">
+
+</div>
+
+

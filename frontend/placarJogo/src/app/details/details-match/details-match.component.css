@@ -1,0 +1,66 @@
+.matches{
+	margin-top: 0px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #7D807B;
+	background-color: #F5F3F2;
+}
+
+.scoreboard{
+	padding-left: 10px;
+	font-weight: bold;
+}
+
+.live{
+	border-style: solid;
+	border-width: 2px;
+	border-color: #7D807B;
+	font-weight: bold;
+	font-size: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.circle {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #F33D16;	
+	margin-right: 10px;
+}
+
+.scoreboardMatch{
+	border-style: solid;
+	border-top-width: 2px;
+	border-right-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 2px;
+	border-color: #D8D5D4;
+    display: flex;
+    align-items: center; 
+    justify-content: center;	
+}
+
+.championship{
+	font-weight: bold;
+	font-size: 20px;
+    justify-content: center; 
+}
+
+.teamName{
+	font-weight: bold;
+	font-size: 35px;
+    justify-content: center;
+	margin-right: 15px;
+	margin-left: 15px;
+
+}
+
+.teamScore{
+	font-weight: bold;
+	font-size: 55px;
+    justify-content: center;
+}
