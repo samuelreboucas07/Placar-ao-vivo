@@ -52,7 +52,7 @@
 
 .teamName{
 	font-weight: bold;
-	font-size: 35px;
+	font-size: 45px;
     justify-content: center;
 	margin-right: 15px;
 	margin-left: 15px;
@@ -63,4 +63,15 @@
 	font-weight: bold;
 	font-size: 55px;
     justify-content: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.shield{
+	width: 80px;
+	padding-bottom: 22px;
+}
+
+.btnCheering{
+	margin-bottom: 15px
 }
