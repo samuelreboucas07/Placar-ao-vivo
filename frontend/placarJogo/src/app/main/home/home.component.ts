@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
   }
 
   viewMatch(match){
-    this.router.navigate(['/home', { outlets: { content: ['match', {match: JSON.stringify(match)} ] }}])
+    this.router.navigate(['/home', { outlets: { content: ['details', {match: JSON.stringify(match)} ] }}])
   }
 
 
