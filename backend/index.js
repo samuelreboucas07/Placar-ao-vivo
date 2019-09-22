@@ -4,6 +4,14 @@ const routes = require('./routes/routes.js')
 const cors = require('cors')
 const app = express()
 
+const server = require('http').Server(app)
+const io = require('socket.io')(server)
+
+app.use((req, res, next) => {
+	req.io = io;
+	next();
+})
+
 //Gerador de log de requisição
 app.use(morgan('combined'))
 
@@ -27,6 +35,9 @@ app.use((err, req, res, next) => {
 		res.status(500).json({message: "Erro ao processar dados enviados."})
 })
 
-const server = app.listen(3000)
+server.listen(3000, () => {
+    console.log('Server started on port 3000');
+});
+
 console.log("Servidor de teste nodejs.")
 
