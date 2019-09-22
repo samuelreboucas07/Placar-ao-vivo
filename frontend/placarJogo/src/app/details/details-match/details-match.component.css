@@ -75,3 +75,15 @@
 .btnCheering{
 	margin-bottom: 15px
 }
+
+.nameVideo{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.contentVideos{
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+  display: flex;
+}
