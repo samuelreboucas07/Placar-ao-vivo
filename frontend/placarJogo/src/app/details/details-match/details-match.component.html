@@ -1,7 +1,7 @@
 	<div class="container">
 	<div class="row">
 		<div class="col-sm-3 live">
-			<div class="circle"></div>
+			<div class="circle_ao_vivo"></div>
 			Ao Vivo
 		</div>
 		<div *ngFor = "let matchLive of matches" class="col-sm-3 matches">
@@ -57,7 +57,62 @@
 	</div>
 
 	<div class="contentVideos">
-		<label class="nameVideo">Vídeos</label>
+		<div class="row">
+		<label class="nameVideo">LANCE A LANCE</label>
+		</div>
+		<hr>
+		<div class="row">
+		<div class="col-md-8">
+		<div *ngFor="let throw of match.bids" class="row">
+			
+			<div class="col-sm-3 timeMove">
+				<div class="circle">
+				</div>
+				<label class="time">{{throw.time}}'</label>
+				<label class="half">{{throw.half}}° TEMPO</label>
+			</div>
+			
+			<div class="col-sm-8 informations">
+				<div class="row">
+					<label class="team">{{throw.team}}</label>
+				</div>
+				<div class="row">
+					<label class="subject">{{throw.subject}}</label>
+				</div>
+				<div class="row">
+					<label class="description">{{throw.description}}</label>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="col-md-4">
+			<div class="card">
+			  <div class="card-header">
+			   <label class="fichaTec"> Ficha Técnica </label>
+			  </div>
+			  <div class="card-body">
+			    <div class="row card-teams">
+				    <label class="card-title">{{match.teamA.abbr}} </label>
+					<img class="shield_token" src="./../../assets/images/escudos/{{this.match.teamA.badge}}">
+					<img class="shield_token" src="./../../assets/images/escudos/{{this.match.teamB.badge}}">
+				    <label class="card-title">{{match.teamB.abbr}}</label>
+				</div>
+			    	<div class="row">
+			    		<div class="col-md-6">
+			    			<div class="row players_a" *ngFor="let players_a of match.teamA.players">
+			    			<label class="name_player_a">{{players_a.name}}</label>
+			    		</div>
+			    		</div>
+			    		<div  class="col-md-6">
+			    			<div class="row players_b" *ngFor="let players_b of match.teamB.players">
+			    			<label class=" name_player_b">{{players_b.name}}</label>
+			    		</div>
+			    		</div>
+			    	</div>
+			  </div>
+			</div>
+		</div>
+	</div>
 	</div>
 	
 

@@ -24,7 +24,7 @@
     justify-content: center; 
 }
 
-.circle {
+.circle_ao_vivo {
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
@@ -85,5 +85,96 @@
   margin: auto;
   width: 80%;
   padding: 10px;
-  display: flex;
+  /*display: flex;*/
+
+}
+
+.timeMove{
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-color: #8B8C8B;
+	border-style: solid;
+}
+
+.time{
+	font-size: 60px;
+	color: #989998;
+	font-weight: normal;
+	margin-bottom: -40px;
+}
+
+.half{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+
+.circle{
+width: 10px;
+height: 10px;
+border-radius: 50%;
+margin-left: 108%;
+background-color: #0E84B7;
+}
+
+.informations{
+	margin-left: 20px;
+}
+
+.team{
+	font-size: 15px;
+	font-weight: bold;
+	color: #989998;
+}
+
+.subject{
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.description{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.card-header{
+	background-color: #58B319;
+}
+
+.fichaTec{
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.card-teams{
+	justify-content: center;
+}
+
+.shield_token{
+	width: 40px;
+	padding-bottom: 22px;
+}
+
+.card-title{
+	position: relative;
+	padding-top: 5%;
+	font-weight: bold;
+}
+
+.players_a{
+  text-align: right;
+  text-justify: inter-word;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+
+.players_b{
+  text-align: left;
+  text-justify: inter-word;	
+  margin-left: 20px;	
+  font-weight: bold;
 }
