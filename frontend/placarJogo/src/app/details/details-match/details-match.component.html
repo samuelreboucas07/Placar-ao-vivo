@@ -62,7 +62,7 @@
 		</div>
 		<hr>
 		<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-7">
 		<div *ngFor="let throw of match.bids" class="row">
 			
 			<div class="col-sm-3 timeMove">
@@ -85,7 +85,7 @@
 			</div>
 		</div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-5">
 			<div class="card">
 			  <div class="card-header">
 			   <label class="fichaTec"> Ficha Técnica </label>
@@ -99,12 +99,14 @@
 				</div>
 			    	<div class="row">
 			    		<div class="col-md-6">
-			    			<div class="row players_a" *ngFor="let players_a of match.teamA.players">
-			    			<label class="name_player_a">{{players_a.name}}</label>
-			    		</div>
+			    			<div class="players_a" *ngFor="let players_a of match.teamA.players">
+				    			<label class="name_player_a">{{players_a.name}}</label>
+				    			<label class="player_a_position">{{players_a.pos}}</label>
+			    			</div>
 			    		</div>
 			    		<div  class="col-md-6">
-			    			<div class="row players_b" *ngFor="let players_b of match.teamB.players">
+			    			<div class="players_b" *ngFor="let players_b of match.teamB.players">
+				    		<label class="player_b_position">{{players_b.pos}}</label>
 			    			<label class=" name_player_b">{{players_b.name}}</label>
 			    		</div>
 			    		</div>
@@ -113,6 +115,15 @@
 			</div>
 		</div>
 	</div>
+	</div>
+
+	<div class="container credits">
+		<!-- <div class="row"> -->
+		<label class="name_credits">Este curso tem como base o Mini Curso Gratuito de Socket.IO disponibilizado pela <a href="https://www.devpleno.com/">DevPleno.com</a></label>
+		<!-- </div> -->
+		<div class="row">
+		<img src="./../../assets/images/LOGO-DEVPLENO.png" class="rounded mx-auto d-block" alt="...">
+		</div>
 	</div>
 	
 
