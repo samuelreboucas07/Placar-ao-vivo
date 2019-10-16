@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
               public elementRef: ElementRef,
               private homeServices: HomeServices,
               private route: ActivatedRoute,
-              private router: Router) { }
+              private router: Router) {}
   
   ngOnInit() {
   	this.homeServices.getMatches()

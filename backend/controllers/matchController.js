@@ -9,5 +9,7 @@ module.exports = {
 		const matches = db.get('matches').value()
 		req.io.emit("match", matches)
 		res.json({status: "sucess", data: matches})
-	}
+	},
+
+
 }
