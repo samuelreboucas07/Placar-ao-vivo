@@ -4,10 +4,11 @@ import { HomeComponent } from './home/home.component';
 import { MenuSharedComponent } from './menu-shared/menu-shared.component';
 import { RouterModule } from '@angular/router';
 import { MainRoutingModule } from './main-routing.module';
+import { HomeAdminComponent } from './home-admin/home-admin.component';
 
 
 @NgModule({
-  declarations: [MenuSharedComponent, HomeComponent],
+  declarations: [MenuSharedComponent, HomeComponent, HomeAdminComponent],
   imports: [
     CommonModule,
     RouterModule,
