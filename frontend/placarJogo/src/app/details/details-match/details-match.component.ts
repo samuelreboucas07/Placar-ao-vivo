@@ -20,9 +20,9 @@ export class DetailsMatchComponent implements OnInit {
               ) { }
 
   ngOnInit() {
-  // this.websocketServices.listen('test_event').subscribe((data) => {
-  //   console.log(data)
-  // })
+  this.websocketServices.listen('match').subscribe((data) => {
+    console.log(data)
+  })
 
   const game = this.route.snapshot.paramMap.get('match');
   this.match = JSON.parse(game);
