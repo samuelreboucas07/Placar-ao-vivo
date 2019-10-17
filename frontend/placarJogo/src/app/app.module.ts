@@ -9,6 +9,9 @@ import { DetailsModule } from './details/details.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -20,7 +23,8 @@ import { CommonModule } from '@angular/common';
     DetailsModule,
     CommonModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,12 +13,13 @@
         <div class="collapse" [attr.id]="'match' + i">
           <div class="card card-body">
             <span class="placar">Placar</span>
+            <div class="form-group">
             <div class="row">
             <div class="col-md-1 flex-box">    
               {{match.teamA.abbr}}
             </div>
             <div class="col-md-3">    
-              <input type="number" class="form-control" placeholder="" aria-label="teamA" aria-describedby="basic-addon1">
+              <input type="number" class="form-control" placeholder="" [attr.value]="match.teamA.score" aria-label="teamA" aria-describedby="basic-addon1">
             </div>
           </div>
           <div class="row">
@@ -26,11 +27,12 @@
               {{match.teamB.abbr}}
             </div>
             <div class="col-md-3">    
-              <input type="number" class="form-control" placeholder="" aria-label="teamA" aria-describedby="basic-addon1">
+              <input type="number" class="form-control" placeholder="" [attr.value]="match.teamB.score" aria-label="teamA" aria-describedby="basic-addon1">
             </div>
           </div>
           <div class="col align-self-center">
-                <button type="button" class="btn btn-success">Atualizar Placar</button>
+                <button type="button" class="btn btn-success" >Atualizar Placar</button>
+          </div>
           </div>
           </div>
         </div>
