@@ -37,5 +37,6 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/home', { outlets: { content: ['details', {match: JSON.stringify(match)} ] }}])
   }
 
+  
 
 }
