@@ -7,36 +7,42 @@
     		Siga em tempo real
     	</div>
     	{{match.teamA.name}} {{match.teamA.score}} X {{match.teamB.score}} {{match.teamB.name}}
-    	<button type="button" class="btn btn-primary Acompanhar"   data-toggle="collapse" [attr.data-target]="'#match' + i" aria-expanded="false" aria-controls="collapseMatch">Gerenciar</button>
+    	<button type="button" class="btn btn-primary Acompanhar" data-toggle="collapse" [attr.data-target]="'#match' + i"  aria-expanded="false" aria-controls="collapseMatch" (click)="management(match)">Gerenciar</button>
         </div>
         <br>
         <div class="collapse" [attr.id]="'match' + i">
           <div class="card card-body">
             <span class="placar">Placar</span>
-            <div class="form-group">
+            <form [formGroup]="resultForm">
+              <div class="form-group">
+              <div class="row">
+              <div class="col-md-1 flex-box">    
+                {{match.teamA.abbr}}
+              </div>
+              <div class="col-md-3">    
+                <input type="number" formControlName="goalTeamA" class="form-control" placeholder=""  aria-label="teamA" aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
             <div class="row">
-            <div class="col-md-1 flex-box">    
-              {{match.teamA.abbr}}
+              <div class="col-md-1 flex-box">    
+                {{match.teamB.abbr}}
+              </div>
+              <div class="col-md-3">    
+                <input type="number" formControlName="goalTeamB"  class="form-control" placeholder="" aria-label="teamA" aria-describedby="basic-addon1">
+              </div>
             </div>
-            <div class="col-md-3">    
-              <input type="number" class="form-control" placeholder="" [attr.value]="match.teamA.score" aria-label="teamA" aria-describedby="basic-addon1">
+            </div>
+          <div class="form-group">
+            <div class="col align-self-center">
+                  <button type="button" class="btn btn-success" (click) = "update(match)" >Atualizar Placar</button>
+            </div>
+            </div>
+          </form>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-1 flex-box">    
-              {{match.teamB.abbr}}
-            </div>
-            <div class="col-md-3">    
-              <input type="number" class="form-control" placeholder="" [attr.value]="match.teamB.score" aria-label="teamA" aria-describedby="basic-addon1">
-            </div>
-          </div>
-          <div class="col align-self-center">
-                <button type="button" class="btn btn-success" >Atualizar Placar</button>
-          </div>
-          </div>
-          </div>
-        </div>
+    </div>
     </div>
  	</div>
 
- </div>

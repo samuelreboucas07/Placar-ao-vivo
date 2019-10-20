@@ -13,4 +13,7 @@ export class HomeServices{
 		return this.http.get<any>(`${environment.apiUrl}/matches`);
 	}
 
+	updateResultMatch(result: any, idMatch: any){
+		return this.http.post<any>(`${environment.apiUrl}/matches/updateResult/${idMatch}`, result)
+	}
 }
