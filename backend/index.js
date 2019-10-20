@@ -2,7 +2,13 @@ const express = require('express')
 const morgan = require('morgan')
 const routes = require('./routes/routes.js')
 const cors = require('cors')
+const bodyParser = require('body-parser')
+
 const app = express()
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
 
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
