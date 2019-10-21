@@ -12,15 +12,17 @@ module.exports = {
 	},
 
 	async update(req, res){
-		db.set('matches['+req.params.idMatch+'].teamA.score',
+		await db.set('matches['+req.params.idMatch+'].teamA.score',
 		parseInt(req.body.goalTeamA)).write()
-		db.set('matches['+req.params.idMatch+'].teamB.score',
+		await db.set('matches['+req.params.idMatch+'].teamB.score',
 		parseInt(req.body.goalTeamB)).write()
+		const matches = db.get('matches').value()
 		req.io.emit("score", 
 			{match: req.params.idMatch,
-			 scoreA: req.body.goalTeamA,
-			 scoreB: req.body.goalTeamB
+			 matches: matches
 			})
+		res.json({status: "success"})
 	}
+
 
 }

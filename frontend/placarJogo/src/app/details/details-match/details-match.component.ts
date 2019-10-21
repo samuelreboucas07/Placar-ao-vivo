@@ -4,6 +4,8 @@ import { catchError, filter } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { Router, ActivatedRoute, RouterEvent, NavigationEnd } from '@angular/router';
 import { WebsocketServices } from './../../_services/websocket.service'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-details-match',
@@ -11,17 +13,23 @@ import { WebsocketServices } from './../../_services/websocket.service'
   styleUrls: ['./details-match.component.css']
 })
 export class DetailsMatchComponent implements OnInit {
-  matches: any;
-  match: any;
-  
+  matches: any; //Partidas da barra superior
+  match: any;   //Partida pricipal
+  detailsForm: FormGroup;
   constructor(private homeServices: HomeServices,
               private websocketServices: WebsocketServices,
+              private formBuilder: FormBuilder,
               private route: ActivatedRoute,
               ) { }
 
   ngOnInit() {
   this.websocketServices.listen('score').subscribe((data) => {
-    console.log(data)
+    //Pode ser feito o controle individual, mas como estou usando o ngFor. 
+    //Modifiquei o objeto todo, pois o control do form teria a mesma referência.
+    this.matches = data['matches']
+    if(data['match'] == this.match.id){
+      this.match = data['matches'][data['match']]
+    }
   })
   const game = this.route.snapshot.paramMap.get('match');
   this.match = JSON.parse(game);

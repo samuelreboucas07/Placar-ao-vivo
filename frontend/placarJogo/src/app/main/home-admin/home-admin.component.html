@@ -36,7 +36,8 @@
             </div>
           <div class="form-group">
             <div class="col align-self-center">
-                  <button type="button" class="btn btn-success" (click) = "update(match)" >Atualizar Placar</button>
+                  <button type="button" class="btn btn-success" (click) = "update(match)" 
+                  [disabled]="loading">{{loading ? 'Aguarde' : 'Atualizar Placar'}}</button>
             </div>
             </div>
           </form>
