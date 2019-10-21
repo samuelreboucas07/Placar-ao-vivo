@@ -14,6 +14,7 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 export class HomeAdminComponent implements OnInit {
   matches = []
   resultForm:  FormGroup;
+  loading = false;
   constructor(@Inject(DOCUMENT) public document,
               public elementRef: ElementRef,
               private formBuilder: FormBuilder,
@@ -42,13 +43,17 @@ export class HomeAdminComponent implements OnInit {
   }
 
   update(match){
+    this.loading = true;
     this.homeServices.updateResultMatch(this.resultForm.value, match.id)
     .pipe(catchError(error => {
       return throwError(error)
     }))
     .subscribe(
       result => {
-        console.log("success")
+        if(result.status == "success"){
+          console.log("ddd")
+          this.loading = false;
+        }
       })
   }
 
