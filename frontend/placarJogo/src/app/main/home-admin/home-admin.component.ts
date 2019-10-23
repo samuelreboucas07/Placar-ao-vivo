@@ -5,6 +5,7 @@ import { catchError, filter } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { WebsocketServices } from './../../_services/websocket.service'
 
 @Component({
   selector: 'app-home-admin',
@@ -18,12 +19,16 @@ export class HomeAdminComponent implements OnInit {
   constructor(@Inject(DOCUMENT) public document,
               public elementRef: ElementRef,
               private formBuilder: FormBuilder,
-              private homeServices: HomeServices) { }
+              private homeServices: HomeServices,
+              private websocketServices: WebsocketServices) { }
 
   ngOnInit() {
   this.resultForm = this.formBuilder.group({
     goalTeamA: [''],
     goalTeamB: ['']
+  })
+  this.websocketServices.listen('score').subscribe((data) => {
+    this.matches = data['matches']
   })
   this.homeServices.getMatches()
   .pipe(catchError(error => {
@@ -51,7 +56,6 @@ export class HomeAdminComponent implements OnInit {
     .subscribe(
       result => {
         if(result.status == "success"){
-          console.log("ddd")
           this.loading = false;
         }
       })

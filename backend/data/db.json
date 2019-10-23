@@ -52,7 +52,7 @@
         "abbr": "FLA",
         "badge": "logo1.png",
         "supporters": 5,
-        "score": 1,
+        "score": 3,
         "players": [
           {
             "name": "Alex Muralha",
@@ -77,7 +77,7 @@
         "abbr": "CAM",
         "badge": "logo2.png",
         "supporters": 4,
-        "score": 1,
+        "score": 2,
         "players": [
           {
             "name": "Vitor",
@@ -136,7 +136,7 @@
         "abbr": "PAL",
         "badge": "logo1.png",
         "supporters": 15,
-        "score": 2,
+        "score": 0,
         "players": [
           {
             "name": "Alex Muralha",
@@ -161,7 +161,7 @@
         "abbr": "CRU",
         "badge": "logo2.png",
         "supporters": 10,
-        "score": 1,
+        "score": 0,
         "players": [
           {
             "name": "Alex Muralha",
