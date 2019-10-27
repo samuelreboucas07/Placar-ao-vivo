@@ -16,4 +16,8 @@ export class HomeServices{
 	updateResultMatch(result: any, idMatch: any){
 		return this.http.post<any>(`${environment.apiUrl}/matches/updateResult/${idMatch}`, result)
 	}
+
+	updateSupporters(teamSupporter: any, idMatch: any){
+		return this.http.get<any>(`${environment.apiUrl}/matches/updateSupporters/${idMatch}/${teamSupporter}`)
+	}
 }
