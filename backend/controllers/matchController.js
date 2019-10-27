@@ -22,6 +22,10 @@ module.exports = {
 			 matches: matches
 			})
 		res.json({status: "success"})
+	},
+
+	async updateSupporters(req, res){
+		
 	}
 
 

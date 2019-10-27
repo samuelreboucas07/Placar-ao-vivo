@@ -16,6 +16,7 @@ export class DetailsMatchComponent implements OnInit {
   matches: any; //Partidas da barra superior
   match: any;   //Partida pricipal
   detailsForm: FormGroup;
+  supportersTeamA: any;
   constructor(private homeServices: HomeServices,
               private websocketServices: WebsocketServices,
               private formBuilder: FormBuilder,
@@ -33,6 +34,8 @@ export class DetailsMatchComponent implements OnInit {
   })
   const game = this.route.snapshot.paramMap.get('match');
   this.match = JSON.parse(game);
+  const supporters = this.match.teamA.supporters + this.match.teamB.supporters
+  this.supportersTeamA = (this.match.teamA.supporters/supporters)*100;
   this.fetchLives()
   }
 
@@ -46,6 +49,10 @@ export class DetailsMatchComponent implements OnInit {
         this.matches = result.data
       }
     );
+  }
+
+  supporter(team){
+    console.log(team)
   }
 
   }
