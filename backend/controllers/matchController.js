@@ -25,7 +25,26 @@ module.exports = {
 	},
 
 	async updateSupporters(req, res){
-		
+		let supporterA = db.get('matches['+req.params.idMatch+'].teamA.supporters').value()
+		let supporterB = db.get('matches['+req.params.idMatch+'].teamB.supporters').value()
+		if(req.params.team === 'teamA'){
+			supporterA = supporterA + 1
+			await db.set('matches['+req.params.idMatch+'].teamA.supporters',
+			parseInt(supporterA)).write()
+		}
+		else{
+			supporterB = supporterB + 1
+			await db.set('matches['+req.params.idMatch+'].teamB.supporters',
+			parseInt(supporterB)).write()
+		}
+		let supportersTotal = supporterA + supporterB
+		let porcentagemTeamA;
+		if(supportersTotal > 0){
+			porcentagemTeamA = ((supporterA/supportersTotal)*100)
+		}
+		req.io.emit('supporters', 
+					{porcentTeamA: porcentagemTeamA})
+		res.json({status: "success"})
 	}
 
 
