@@ -42,6 +42,9 @@ module.exports = {
 		if(supportersTotal > 0){
 			porcentagemTeamA = ((supporterA/supportersTotal)*100)
 		}
+		console.log(porcentagemTeamA)
+		// req.io.to('match-'+req.params.idMatch).emit('supporters', porcentagemTeamA)
+
 		req.io.emit('supporters', 
 					{porcentTeamA: porcentagemTeamA})
 		res.json({status: "success"})

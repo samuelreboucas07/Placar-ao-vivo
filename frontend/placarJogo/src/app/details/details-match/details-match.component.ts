@@ -41,6 +41,8 @@ export class DetailsMatchComponent implements OnInit {
   const supporters = this.match.teamA.supporters + this.match.teamB.supporters
   this.supportersTeamA = (this.match.teamA.supporters/supporters)*100;
   this.fetchLives()
+  this.websocketServices.emit('match', this.match.id)
+
   }
 
   fetchLives(){
