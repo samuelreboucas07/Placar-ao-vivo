@@ -19,10 +19,15 @@ app.use((req, res, next) => {
 })
 
 io.on('connection', function(socket){
-	if(socket.handshake.query.match){
-		socket.join('match-'+socket.handshake.query.match)
-		console.log("conectado a partida "+socket.handshake.query.match)
-	}
+	// if(socket.handshake.query.match){
+	// 	socket.join('match-'+socket.handshake.query.match)
+	// 	console.log("conectado a partida "+socket.handshake.query.match)
+	// }
+	socket.on('match', function(room) {
+		console.log("Conectado a sala "+room)
+	    socket.join(room);
+	  		});
+	console.log("Conectado a sala geral")
 });
 
 

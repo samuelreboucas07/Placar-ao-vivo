@@ -17,6 +17,7 @@ export class WebsocketServices{
 	listen(eventName: String) {
 		return new Observable((subscriber) => {
 			this.socket.on(eventName, (data) => {
+				console.log("sssssss")
 				subscriber.next(data);
 			})
 		})
@@ -24,7 +25,7 @@ export class WebsocketServices{
 
 	emit(eventName: string, data: any) {
 		this.socket = io(this.url, { query: {match: data}})
-		this.socket.emit(eventName, data)
+		this.socket.emit(eventName, 'match-'+data)
 	}
 
 

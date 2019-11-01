@@ -51,7 +51,7 @@
         "name": "Flamengo",
         "abbr": "FLA",
         "badge": "logo1.png",
-        "supporters": 99,
+        "supporters": 169,
         "score": 2,
         "players": [
           {
@@ -76,7 +76,7 @@
         "name": "Atlético-MG",
         "abbr": "CAM",
         "badge": "logo2.png",
-        "supporters": 40,
+        "supporters": 44,
         "score": 3,
         "players": [
           {
@@ -135,7 +135,7 @@
         "name": "Palmeiras",
         "abbr": "PAL",
         "badge": "logo1.png",
-        "supporters": 20,
+        "supporters": 28,
         "score": 0,
         "players": [
           {

@@ -33,8 +33,8 @@ export class DetailsMatchComponent implements OnInit {
     }
   })
   this.websocketServices.listen('supporters').subscribe((data) => {
+    console.log("data")
     this.supportersTeamA = data['porcentTeamA']
-    console.log(data)
   })
   const game = this.route.snapshot.paramMap.get('match');
   this.match = JSON.parse(game);
