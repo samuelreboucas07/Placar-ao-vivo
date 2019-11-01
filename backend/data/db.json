@@ -51,7 +51,7 @@
         "name": "Flamengo",
         "abbr": "FLA",
         "badge": "logo1.png",
-        "supporters": 46,
+        "supporters": 169,
         "score": 2,
         "players": [
           {
@@ -76,8 +76,8 @@
         "name": "Atlético-MG",
         "abbr": "CAM",
         "badge": "logo2.png",
-        "supporters": 24,
-        "score": 1,
+        "supporters": 44,
+        "score": 3,
         "players": [
           {
             "name": "Vitor",
@@ -135,7 +135,7 @@
         "name": "Palmeiras",
         "abbr": "PAL",
         "badge": "logo1.png",
-        "supporters": 20,
+        "supporters": 28,
         "score": 0,
         "players": [
           {
@@ -160,7 +160,7 @@
         "name": "Cruzeiro-MG",
         "abbr": "CRU",
         "badge": "logo2.png",
-        "supporters": 10,
+        "supporters": 11,
         "score": 4,
         "players": [
           {

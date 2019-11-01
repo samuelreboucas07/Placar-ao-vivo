@@ -9,7 +9,7 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-
+// Separando rooms para diminuir a transição de dados desncessários, melhora a escalabilidade.
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
 
@@ -17,6 +17,19 @@ app.use((req, res, next) => {
 	req.io = io;
 	next();
 })
+
+io.on('connection', function(socket){
+	// if(socket.handshake.query.match){
+	// 	socket.join('match-'+socket.handshake.query.match)
+	// 	console.log("conectado a partida "+socket.handshake.query.match)
+	// }
+	socket.on('match', function(room) {
+		console.log("Conectado a sala "+room)
+	    socket.join(room);
+	  		});
+	console.log("Conectado a sala geral")
+});
+
 
 //Gerador de log de requisição
 app.use(morgan('combined'))
