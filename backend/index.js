@@ -10,23 +10,36 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 // Separando rooms para diminuir a transição de dados desncessários, melhora a escalabilidade.
-const server = require('http').Server(app)
-const io = require('socket.io')(server)
+// const server = require('http').Server(app)
+// const io = require('socket.io')(server)
+const socketIO = require('socket.io')
+const server = app.listen(3000)
+const io = socketIO(server)
 
 app.use((req, res, next) => {
 	req.io = io;
-	next();
+	return next();
 })
 
-io.on('connection', function(socket){
+
+io.sockets.on('connection', function(socket){
 	// if(socket.handshake.query.match){
 	// 	socket.join('match-'+socket.handshake.query.match)
 	// 	console.log("conectado a partida "+socket.handshake.query.match)
 	// }
 	socket.on('match', function(room) {
 		console.log("Conectado a sala "+room)
-	    socket.join(room);
-	  		});
+	    socket.join('match-'+room);
+	    // socket.broadcast.in('match-'+room).emit("new user")
+  		});
+
+	socket.on("supporter", function(data){
+		console.log("supporter")
+		// const teste = io.in('/match-0')
+		io.of('idwOlP7PGvnUBzu2AAAB').in('match-0').emit("supporters", data)
+		// teste.emit("supporters", data)
+		// io.sockets.in('match-0').emit("supporters", data)
+	});
 	console.log("Conectado a sala geral")
 });
 
@@ -54,8 +67,8 @@ app.use((err, req, res, next) => {
 		res.status(500).json({message: "Erro ao processar dados enviados."})
 })
 
-server.listen(3000, () => {
-    console.log('Server started on port 3000');
-});
+// server.listen(3000, () => {
+//     console.log('Server started on port 3000');
+// });
 
 

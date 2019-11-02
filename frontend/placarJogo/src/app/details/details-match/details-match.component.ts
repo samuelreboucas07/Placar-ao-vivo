@@ -33,8 +33,8 @@ export class DetailsMatchComponent implements OnInit {
     }
   })
   this.websocketServices.listen('supporters').subscribe((data) => {
-    console.log("data")
-    this.supportersTeamA = data['porcentTeamA']
+    console.log(data['status'])
+    this.supportersTeamA = data['status']
   })
   const game = this.route.snapshot.paramMap.get('match');
   this.match = JSON.parse(game);
@@ -64,6 +64,7 @@ export class DetailsMatchComponent implements OnInit {
     }))
     .subscribe(
       result => {
+        this.websocketServices.emit('supporter', result)
       }
     )
   }
