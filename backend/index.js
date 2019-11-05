@@ -6,51 +6,44 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(cors())
+app.use(express.json())
 
-// Separando rooms para diminuir a transição de dados desncessários, melhora a escalabilidade.
-// const server = require('http').Server(app)
-// const io = require('socket.io')(server)
-const socketIO = require('socket.io')
-const server = app.listen(3000)
-const io = socketIO(server)
 
 app.use((req, res, next) => {
 	req.io = io;
 	return next();
 })
 
+io.use (function (socket, next) { 
+next (null, true); 
+}); 
 
-io.sockets.on('connection', function(socket){
-	// if(socket.handshake.query.match){
-	// 	socket.join('match-'+socket.handshake.query.match)
-	// 	console.log("conectado a partida "+socket.handshake.query.match)
-	// }
-	socket.on('match', function(room) {
-		console.log("Conectado a sala "+room)
-	    socket.join('match-'+room);
-	    // socket.broadcast.in('match-'+room).emit("new user")
+
+io.on('connection', function(socket){
+	socket.on('match', function(IDroom) {
+		const room = 'match-'+IDroom;
+	    socket.join(room);
+		console.log("Usuaŕio " +socket.id+ " Conectado a sala "+room)
   		});
 
 	socket.on("supporter", function(data){
-		console.log("supporter")
-		// const teste = io.in('/match-0')
-		io.of('idwOlP7PGvnUBzu2AAAB').in('match-0').emit("supporters", data)
-		// teste.emit("supporters", data)
-		// io.sockets.in('match-0').emit("supporters", data)
+        io.in('match-0').emit( 'supporters', data)
+        console.log("teste")
 	});
-	console.log("Conectado a sala geral")
 });
 
 
 //Gerador de log de requisição
 app.use(morgan('combined'))
 
-app.use(cors())
 
 app.use('/matches', routes)
-app.use(express.json())
 
 app.use((req, res, next) => {
 	const err = new Error("Not Found")
@@ -67,8 +60,8 @@ app.use((err, req, res, next) => {
 		res.status(500).json({message: "Erro ao processar dados enviados."})
 })
 
-// server.listen(3000, () => {
-//     console.log('Server started on port 3000');
-// });
+server.listen(3000, () => {
+    console.log('Server started on port 3000');
+});
 
 

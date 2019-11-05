@@ -51,8 +51,8 @@
         "name": "Flamengo",
         "abbr": "FLA",
         "badge": "logo1.png",
-        "supporters": 9,
-        "score": 1,
+        "supporters": 3,
+        "score": 0,
         "players": [
           {
             "name": "Alex Muralha",
@@ -76,7 +76,7 @@
         "name": "Atlético-MG",
         "abbr": "CAM",
         "badge": "logo2.png",
-        "supporters": 45,
+        "supporters": 10,
         "score": 3,
         "players": [
           {
@@ -135,7 +135,7 @@
         "name": "Palmeiras",
         "abbr": "PAL",
         "badge": "logo1.png",
-        "supporters": 28,
+        "supporters": 1,
         "score": 0,
         "players": [
           {

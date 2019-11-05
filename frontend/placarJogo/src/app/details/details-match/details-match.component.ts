@@ -33,8 +33,8 @@ export class DetailsMatchComponent implements OnInit {
     }
   })
   this.websocketServices.listen('supporters').subscribe((data) => {
-    console.log(data['status'])
-    this.supportersTeamA = data['status']
+    console.log(data)
+    this.supportersTeamA = data
   })
   const game = this.route.snapshot.paramMap.get('match');
   this.match = JSON.parse(game);
@@ -58,13 +58,26 @@ export class DetailsMatchComponent implements OnInit {
   }
 
   supporter(team){
+    let supporterA = this.match.teamA.supporters
+    let supporterB = this.match.teamB.supporters
+    if(team === 'teamA'){
+      supporterA = supporterA + 1
+    }
+    else{
+      supporterB = supporterB + 1
+    }
+    let supportersTotal = supporterA + supporterB
+    let porcentagemTeamA;
+    if(supportersTotal > 0){
+      porcentagemTeamA = ((supporterA/supportersTotal)*100)
+    }
+    this.websocketServices.emit('supporter', porcentagemTeamA)
     this.homeServices.updateSupporters(team, this.match.id)
     .pipe(catchError(error => {
       return throwError(error);
     }))
     .subscribe(
       result => {
-        this.websocketServices.emit('supporter', result)
       }
     )
   }

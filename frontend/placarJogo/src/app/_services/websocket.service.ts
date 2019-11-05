@@ -11,7 +11,7 @@ export class WebsocketServices{
 	url = environment.apiUrl;
 
 	constructor() {
-		this.socket = io(this.url)
+		this.socket = io.connect(this.url)
 	}
 
 	listen(eventName: String) {
@@ -23,7 +23,6 @@ export class WebsocketServices{
 	}
 
 	emit(eventName: string, data: any) {
-		// this.socket = io(this.url, { query: {match: data}})
 		this.socket.emit(eventName, data)
 	}
 
