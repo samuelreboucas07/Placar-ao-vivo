@@ -32,10 +32,10 @@ io.on('connection', function(socket){
 		console.log("Usuaŕio " +socket.id+ " Conectado a sala "+room)
   		});
 
-	socket.on("supporter", function(data){
-        io.in('match-0').emit( 'supporters', data)
-        console.log("teste")
-	});
+	// socket.on("supporter", function(data){
+ //        io.in('match-0').emit( 'supporters', data)
+ //        console.log("teste")
+	// });
 });
 
 
