@@ -11,7 +11,7 @@
 
 * [Note](#note)
 
-# Overview
+## Overview
 
 In this project an application was developed that is based on the free course provided by the platform [DevPleno](https://devpleno.com/), which exemplifies the use of the JavaScript library [Socket.io](https://socket.io/) to allow two-way communication between web applications in real time.
 
