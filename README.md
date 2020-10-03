@@ -38,7 +38,7 @@ This real-time update of the scoreboard occurs thanks to the Socket.io library.
 * [NodeJs](https://nodejs.org/en/)
 * [Socket.io](https://socket.io/)
 * [Lowdb](https://github.com/typicode/lowdb)
-* 
+
 ## How to use
 
 Initially it is necessary to clone the present repository:
