@@ -1,0 +1,214 @@
+.matches{
+	margin-top: 0px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #7D807B;
+	background-color: #F5F3F2;
+}
+
+.scoreboard{
+	padding-left: 10px;
+	font-weight: bold;
+}
+
+.live{
+	border-style: solid;
+	border-width: 2px;
+	border-color: #7D807B;
+	font-weight: bold;
+	font-size: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.circle_ao_vivo {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #F33D16;	
+	margin-right: 10px;
+}
+
+.scoreboardMatch{
+	border-style: solid;
+	border-top-width: 2px;
+	border-right-width: 0px;
+	border-left-width: 0px;
+	border-bottom-width: 2px;
+	border-color: #D8D5D4;
+    display: flex;
+    align-items: center; 
+    justify-content: center;	
+}
+
+.championship{
+	font-weight: bold;
+	font-size: 20px;
+    justify-content: center; 
+}
+
+.teamName{
+	font-weight: bold;
+	font-size: 45px;
+    justify-content: center;
+	margin-right: 15px;
+	margin-left: 15px;
+
+}
+
+.teamScore{
+	font-weight: bold;
+	font-size: 55px;
+    justify-content: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.shield{
+	width: 80px;
+	padding-bottom: 22px;
+}
+
+.btnCheering{
+	margin-bottom: 15px
+}
+
+.nameVideo{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.contentVideos{
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+  /*display: flex;*/
+
+}
+
+.timeMove{
+	border-top-width: 0px;
+	border-right-width: 1px;
+	border-left-width: 0px;
+	border-bottom-width: 0px;
+	border-color: #8B8C8B;
+	border-style: solid;
+}
+
+.time{
+	font-size: 60px;
+	color: #989998;
+	font-weight: normal;
+	margin-bottom: -40px;
+}
+
+.half{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+
+.circle{
+width: 10px;
+height: 10px;
+border-radius: 50%;
+margin-left: 108%;
+background-color: #0E84B7;
+}
+
+.informations{
+	margin-left: 20px;
+}
+
+.team{
+	font-size: 15px;
+	font-weight: bold;
+	color: #989998;
+}
+
+.subject{
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.description{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.card-header{
+	background-color: #58B319;
+}
+
+.fichaTec{
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.card-teams{
+	justify-content: center;
+}
+
+.shield_token{
+	width: 40px;
+	padding-bottom: 22px;
+}
+
+.card-title{
+	position: relative;
+	padding-top: 5%;
+	font-weight: bold;
+}
+
+.players_a{
+  text-align: right;
+  text-justify: inter-word;
+  font-weight: bold;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 1px;
+  border-left-width: 0px;
+  border-style: solid;
+  border-color: #989998;
+}
+
+
+.players_b{
+  text-align: left;
+  text-justify: inter-word;	
+  font-weight: bold;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 1px;
+  border-left-width: 0px;
+  border-style: solid;
+  border-color: #989998;
+}
+
+.player_a_position{
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+  text-justify: inter-word;
+  color: #989998;
+  margin-left: 5px;
+}
+
+.player_b_position{
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  text-justify: inter-word;
+  color: #989998;
+  margin-right: 5px;
+}
+
+.name_credits{
+	font-weight: bold;
+	color: #989998;
+	margin-top: 30px;
+}
