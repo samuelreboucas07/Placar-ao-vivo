@@ -1,50 +1,63 @@
 
-# Aplicação Socket.io
+# Placar ao vivo
 
-No presente projeto foi desenvolvido uma aplicação que tem como base o curso gratuito disponibilizado pela plataforma [DevPleno](https://devpleno.com/), o qual exemplifica o uso da bibliotexa JavaScript [Socket.io](https://socket.io/) para permitir a comunicação bidirecional entre aplicações web em tempo real.
+* [Overview](#overview)
 
-## Funcionamento
-A execução do presente projeto se divide em três partes principais.
+* [Operation](#operation)
 
-O gerenciamento do time é realizado de modo que seja possível alterar o placar da partida.
+* [Technologies](#technologies)
 
-![gerenciamento](https://github.com/samuelreboucas07/Placar-ao-vivo/blob/master/assets/gerenciamento.gif)
+* [How to use](#How-to-use)
 
-A partir do momento que o placar é alterado os usuários que estiveram com a tela principal aberta verá a alteração do resultado em tempo real.
+* [Note](#note)
+
+# Overview
+
+In this project an application was developed that is based on the free course provided by the platform [DevPleno](https://devpleno.com/), which exemplifies the use of the JavaScript library [Socket.io](https://socket.io/) to allow two-way communication between web applications in real time.
+
+## Operation
+The execution of this project is divided into three main parts.
+
+Team management is performed so that it is possible to change the score of the match.
+
+![management](https://github.com/samuelreboucas07/Placar-ao-vivo/blob/master/assets/gerenciamento.gif)
+
+From the moment the score is changed, users who had the main screen running will see the result change in real time.
 
 ![home](https://github.com/samuelreboucas07/Placar-ao-vivo/blob/master/assets/main.gif)
 
-O mesmo irá ocorrer com os usuários que estivem na tela de acompanhamento de uma partida específica, assim que placar for alterado o mesmo será atualizado tanto na barra superior como no titulo da página onde expressa o resultado.
+The same will occur with users who are on the screen for following a specific match, as soon as the score is changed it will be updated both in the top bar and in the title of the page where the result is expressed.o.
 
-![detalhes](https://github.com/samuelreboucas07/Placar-ao-vivo/blob/master/assets/detalhes.gif)
+![details](https://github.com/samuelreboucas07/Placar-ao-vivo/blob/master/assets/detalhes.gif)
 
-Essa atualização em tempo real do placar ocorre graças a biblioteca Socket.io.
+This real-time update of the scoreboard occurs thanks to the Socket.io library.
 
-## Tecnologias
+## Technologies
 
 * [Angular](https://angular.io/)
 * [NodeJs](https://nodejs.org/en/)
 * [Socket.io](https://socket.io/)
 * [Lowdb](https://github.com/typicode/lowdb)
-## Como usar
+* 
+## How to use
 
-Inicialmente é necessário clonar o presente repositório:
+Initially it is necessary to clone the present repository:
 
-``` https://github.com/samuelreboucas07/Aplica-o-Socket.io.git ```
+``` https://github.com/samuelreboucas07/Placar-ao-vivo.git ```
 
-**Iniciar servidor** 
+**Start server** 
 ```
 cd back-end
 npm install 
 npm start
 ```
-**Inicial Projeto Web**
+**Initial Web Project**
 ```
 cd front-end
 npm install 
 ng serve
 ```
 
-## Observação
+## Note
 
-O curso ministrado pela DevPleno utilizou da linguagem EJS para desenvolver a aplicação front-ent, entretanto, com o intuito de abordar novas tecnologias o presente projeto utilizou a versão 7 do framework angular.
+The course held by DevPleno used the EJS language to develop the front-ent application, however, in order to address another technology, the present project used version 7 of the angular framework.
