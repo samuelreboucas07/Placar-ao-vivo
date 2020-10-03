@@ -20,7 +20,7 @@ The execution of this project is divided into three main parts.
 
 Team management is performed so that it is possible to change the score of the match.
 
-![management](https://github.com/samuelreboucas07/Placar-ao-vivo/blob/master/assets/gerenciamento.gif)
+![management](https://github.com/samuelreboucas07/Placar-ao-vivo/blob/master/assets/gerenciador.gif)
 
 From the moment the score is changed, users who had the main screen running will see the result change in real time.
 
