@@ -4,7 +4,7 @@
 No presente projeto foi desenvolvido uma aplicação que tem como base o curso gratuito disponibilizado pela plataforma [DevPleno](https://devpleno.com/), o qual exemplifica o uso da bibliotexa JavaScript [Socket.io](https://socket.io/) para permitir a comunicação bidirecional entre aplicações web em tempo real.
 
 ## Funcionamento
-
+![Teste](https://github.com/samuelreboucas07/Aplica-o-Socket.io/blob/develop/assets/alterar_placar_detalhes.gif)
 
 ## Tecnologias
 
